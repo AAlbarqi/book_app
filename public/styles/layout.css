@@ -165,24 +165,61 @@ p{
         width: 350px;
         margin-top: 20px;
     }
-    .section h1{
-        color: red;
+    
+    .section {
+        max-width: 500px;
+        padding: 10px 20px;
+        background: #f4f7f8;
+        margin: 10px auto;
+        padding: 20px;
+        background: rgba(234, 205, 194, 0.2);
+        border-radius: 8px;
+        font-family: Georgia, "Times New Roman", Times, serif;
     }
     
+    .section label {
+        display: block;
+        /* margin-bottom: 8px; */
+    }
+    
+    .section input[type="text"],
+    .section input[type="radio"] {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background: rgba(255, 255, 255, .1);
+        border: none;
+        border-radius: 4px;
+        font-size: 15px;
+        margin: 0;
+        outline: 0;
+        padding: 10px;
+        /* width: 100%; */
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        background-color: #e8eeef;
+        color: #8a97a0;
+        -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+        margin-bottom: 30px;
+    }
+    
+    .section input[type="radio"]{
+        display: inline-block;
+    }
+    
+    .section button {
+        position: relative;
+        display: block;
+        padding: 19px 39px 18px 39px;
+        color: #FFF;
+        margin: 0 auto;
+        background: #B75D69;
+        font-size: 18px;
+        text-align: center;
+        font-style: normal;
+        width: 100%;
+        border: 1px solid #B75D69;
+        border-width: 1px 1px 3px;
+        margin-bottom: 10px;
+    }
 }
-
-/* header div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-footer{
-    display: block;
-    color: #111;
-    font-size: 30px;
-    clear: both;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: #AD8A64;
-} */
