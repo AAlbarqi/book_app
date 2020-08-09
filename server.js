@@ -17,7 +17,7 @@ app.use(express.static('./public'));
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-    res.status(200).send('Homepage');
+    res.render('./pages/index.ejs');
 });
 
 app.listen(PORT, () => {
