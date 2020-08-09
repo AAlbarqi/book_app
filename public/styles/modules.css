@@ -1,0 +1,45 @@
+@import url("base.css");
+@import url("layout.css");
+
+@media (min-width: 320px) and (max-width: 736px){
+   ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #F3F3F4;
+    }
+    
+    ul li {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+    
+    ul li a:hover {
+    background-color: #BF8B85;
+    }
+}
+
+@media (min-width: 2024px){
+    ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     background-color: palegoldenrod;
+     }
+     
+     ul li {
+     display: block;
+     color: white;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     }
+     
+     ul li a:hover {
+     background-color: #BF8B85;
+     }
+ }
+ 

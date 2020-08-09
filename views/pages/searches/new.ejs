@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search</title>
+</head>
+<body>
+    <form action='/searches' method='post'>
+        <label for="searchQuery">Search by Book Title or Author</label>
+        <input type="text" name='searchQuery' placeholder="Book query">
+
+        <label for="inlineRadio1" >Title</label>
+        <input type="radio" name="search" value="title" required>
+
+        <label for="inlineRadio2">Author</label>
+        <input type="radio" name="search" value="author" required>
+  
+        <button type="submit">Submit</button>
+      </form>
+</body>
+</html>
