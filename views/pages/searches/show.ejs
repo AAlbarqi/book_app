@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
+</head>
+<body>
+    <h1>Search Results</h1>
+    <ul>
+        <% bookList.forEach(book => { %>
+            <li>
+                <section>
+                <img src=" <%= book.img %> " alt="book image">
+                <h2> <%= book.title %></h2>
+                <h3> <%= book.author %></h3>
+                <p> <%= book.description %></p>
+                </section>
+            </li>
+        <% }); %>
+    </ul>
+    
+</body>
+</html>
