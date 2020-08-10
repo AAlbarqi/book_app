@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Search</title>
+  <%- include('../../layout/head') %>
 </head>
 <body>
-    <form action='/searches' method='post'>
-        <label for="searchQuery">Search by Book Title or Author</label>
-        <input type="text" name='searchQuery' placeholder="Book query">
-
-        <label for="inlineRadio1" >Title</label>
-        <input type="radio" name="search" value="title" required>
-
-        <label for="inlineRadio2">Author</label>
-        <input type="radio" name="search" value="author" required>
-  
+  <%- include('../../layout/header') %>
+    <section class="section">
+      <form action='/searches' method='post'>
+        <label for="searchQuery">Search by Title or Author</label>
+        <input type="text" name='searchQuery' placeholder="Enter Title or Author">
+        <label for="radio1" >Title
+        <input type="radio" name="search" value="title" required> </label>
+        <label for="radio2">Author
+        <input type="radio" name="search" value="author" required> </label>
         <button type="submit">Submit</button>
       </form>
+    </section>
+    <%- include('../../layout/footer') %>
 </body>
 </html>
