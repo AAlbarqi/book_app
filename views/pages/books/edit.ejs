@@ -1,0 +1,20 @@
+<form action='/book/<%= book.id %>?_method=PUT' method="post" id="save">
+    <h3>UPDATE THE BOOK</h3>
+    <label for="title">Title</label>
+    <input type="text" name="title" value="<%= book.title %>" required>
+    <label for="author">Author</label>
+    <input type="text" name="author" value="<%= book.author %>" required>
+    <label for="isbn">ISBN</label>
+    <input type="text" name="isbn" value="<%= book.isbn %>">
+    <label for="bookshelf">Bookshelf</label>
+    <select name="bookshelf">    
+        <% bookshelfes.forEach(bookshelf => { %>
+            <option value="<%=bookshelf.bookshelf %>"><%=bookshelf.bookshelf %></option>
+        <% }); %>
+    </select>
+    <label for="image_url">Book Cover</label>
+    <input type="text" name="image_url" value="<%= book.image_url %>">
+    <label for="description">Description</label>
+    <input type="text" name="description" value="<%= book.description %>"></p>
+    <button type="submit">UPDATE</button>
+</form>

@@ -1,0 +1,9 @@
+<form action='/books' method="post" id="save">
+    <input type="hidden" name="title" value="<%= book.title %>" required>
+    <input type="hidden" name="author" value="<%= book.author %>" required>
+    <input type="hidden" name="isbn" value="<%= book.isbn %>">
+    <input type="hidden" name="bookshelf" value="<%= book.bookshelf %>">
+    <input type="hidden" name="image_url" value="<%= book.image_url %>">
+    <input type="hidden" name="description" value="<%= book.description %>"></p>
+    <button type="submit">SAVE THIS BOOK</button>
+</form>
