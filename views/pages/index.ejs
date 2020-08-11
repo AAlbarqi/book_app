@@ -12,9 +12,8 @@
           <li>
               <%- include('books/detail', {book : book}) %>
               <form action="/book/<%=book.id %>">
-                <input type="submit" value="View Details" />
-              </form>
-              
+                <button type="submit">VIEW DETAILS</button>
+              </form>  
           </li>
       <% }); %>
   </ul>

@@ -12,24 +12,57 @@
                 <%- include('./detail') %>
           </section>
           </li>
-          <section class="section">
-            <form action='/books' method="post" id="save">
-              <h3>SAVE THE BOOK</h3>
-              <label for="title">Title</label>
-              <input type="text" name="title" value="<%= book.title %>" required>
-              <label for="author">Author</label>
-              <input type="text" name="author" value="<%= book.author %>" required>
-              <label for="isbn">ISBN</label>
-              <input type="text" name="isbn" value="<%= book.isbn %>">
-              <label for="bookshelf">Bookshelf</label>
-              <input type="text" name="bookshelf" value="<%= book.bookshelf %>">
-              <label for="image_url">Book Cover</label>
-              <input type="text" name="image_url" value="<%= book.image_url %>">
-              <label for="description">Description</label>
-              <input type="text" name="description" value="<%= book.description %>"></p>
-              <button type="submit">SELECT THIS BOOK</button>
+          <section class="section" class="details">
+            <button class="myBtn">UPDATE THIS BOOK</button>
+            <div id="updateModal" class="modal">
+              <div class="modal-content">
+              <span class="close">&times;</span>
+              <%- include('./edit') %>
+              </div>
+            </div>
+          </section>
+
+          <section class="section details">
+            <%- include('../books/toSave', {book : book}) %>
+          </section>
+
+          <section class="section details">
+            <form action='/book/<%= book.id %>?_method=DELETE' method="post" id="save">
+              <button class="myBtn" type="submit">DELETE THIS BOOK</button>
             </form>
           </section>
+          
+          <!-- code for the popup form -->
+          <script>
+            var modal = document.getElementsByClassName("modal");
+            var btn = document.getElementsByClassName("myBtn");
+            var span = document.getElementsByClassName("close");
+            for (let i = 0; i < modal.length; i++) {
+              modal[i].style.display = "none";
+            }
+            console.log(btn)
+            btn[0].onclick = function() {
+              modal[0].style.display = "block";
+            }
+            btn[1].onclick = function() {
+              modal[1].style.display = "block";
+            }
+            span[0].onclick = function() {
+              modal[0].style.display = "none";
+            }
+            span[1].onclick = function() {
+              modal[1].style.display = "none";
+            }
+            window.onclick = function(event) {
+              if (event.target == modal[0]) {
+                modal[0].style.display = "none";
+              } else if (event.target == modal[1]) {
+                modal[1].style.display = "none";
+              } else if (event.target == modal[2]) {
+                modal[2].style.display = "none";
+              }
+            }
+            </script>
 
       </ul>
     </main>

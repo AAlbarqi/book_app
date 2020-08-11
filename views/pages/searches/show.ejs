@@ -9,9 +9,7 @@
         <% bookList.forEach(book => { %>
             <li>
                 <%- include('../books/detail', {book : book}) %>
-              <form action="/book/<%book.isbn %>">
-                <input type="submit" value="View Details" />
-              </form>
+                <%- include('../books/toSave', {book : book}) %>
             </li>
         <% }); %>
     </ul>
