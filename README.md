@@ -4,29 +4,30 @@
 **Version**: 1.0.0 
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code 301 class. (i.e. What's your problem domain?) -->
+This application introduces the fromtend and backend of a Book list application, which shows the books details data for different books depending on the search conducted.
+The application solves the problem of searching about different books of any Author, or any details about any book.
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+
+- npm start
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+
+Technologies used :
+
+- APIs used - Google Books API for getting search results for different books by Title or Author name.
+- Git for version controlling.
+- Github for project dashboard, creating issues, Pull-Request etc.
+- Javascript for Backend (Express Node js, Superagent, dotenv, SQL).
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
+10-08-2020 11:00pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
+
+11-08-2020 4:00pm - Application now has a fully-functional express server, with GET, PUT, DELETE and POST routes for the book resource.
+
+12-08-2020 4:00pm - Application now is fully-functional.
 
 ## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
--->
-```
-Number and name of feature: ________________________________
 
-Estimate of time needed to complete: _____
-
-Start time: _____
-
-Finish time: _____
-
-Actual time needed to complete: _____
+All credits go for me LOL.
