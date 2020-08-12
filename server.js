@@ -24,7 +24,7 @@ client.on('error', err => console.error(err));
 
 app.get('/', getSavedBooks);
 app.get('/searches/new', (req, res) => {
-  res.render('./pages/searches/new.ejs');
+  res.render('./pages/searches/new');
 });
 app.post('/searches', searchBook);
 app.post('/books', searchBooks);
@@ -99,7 +99,7 @@ function getSavedBooks(req,res){
     if(data.rowCount === 0){
       res.render('pages/index');
     } else {
-      res.render('pages/index', {bookList : data.rows});
+      res.render('pages/index', {books : data.rows});
     }
   }).catch(err => handleError(err,res));
 }
@@ -117,7 +117,7 @@ function searchBook (req,res){
       let bookshelf = book.volumeInfo.categories;
       books.push(new Book(title,author,image_url,description,isbn,bookshelf));
     });
-    res.render('./pages/searches/show.ejs', {bookList:books});
+    res.render('./pages/searches/show', {books:books});
   }).catch(err => handleError(err, res));
 }
 

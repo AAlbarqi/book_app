@@ -6,7 +6,7 @@
 <body>
     <%- include('../../layout/header') %>
     <ul>
-        <% bookList.forEach(book => { %>
+        <% books.forEach(book => { %>
             <li>
                 <%- include('../books/detail', {book : book}) %>
                 <%- include('../books/toSave', {book : book}) %>

@@ -6,9 +6,9 @@
 <body>
     <%- include('../layout/header') %>
     <main>
-    <h3>Number of Books: <%= bookList.length %></h3>
+    <h3>Number of Books: <%= books.length %></h3>
     <ul>
-      <% bookList.forEach(book => { %>
+      <% books.forEach(book => { %>
           <li>
               <%- include('books/detail', {book : book}) %>
               <form action="/book/<%=book.id %>">
